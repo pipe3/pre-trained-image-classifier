@@ -6,16 +6,21 @@ Command Line Arguments:
     arch = resnet 
  dogfile = dognames.txt
 
-Pet Image Label Dictionary has 6 key-value pairs.
-Below are 6 of them:
+Pet Image Label Dictionary has 8 key-value pairs.
+Below are 8 of them:
  1 key:             Dachshund_02a.jpeg  label:                  dachshund
  2 key:             Dachshund_01a.jpeg  label:                  dachshund
- 3 key:                Heizung_01.jpeg  label:                    heizung
- 4 key:             Dachshund_01b.jpeg  label:                  dachshund
- 5 key:                  Oskar_01.jpeg  label:                      oskar
- 6 key:             Dachshund_02b.jpeg  label:                  dachshund
-......
+ 3 key:        German_shepherd_01b.jpg  label:            german shepherd
+ 4 key:                Heizung_01.jpeg  label:                    heizung
+ 5 key:        German_shepherd_01a.jpg  label:            german shepherd
+ 6 key:             Dachshund_01b.jpeg  label:                  dachshund
+ 7 key:                  Oskar_01.jpeg  label:                      oskar
+ 8 key:             Dachshund_02b.jpeg  label:                  dachshund
+........
      MATCH:
+
+       German_shepherd_01a.jpg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
 
  NOT A MATCH:
 
@@ -24,6 +29,9 @@ Real:                  dachshund   Classifier:                norfolk terrier
 
             Dachshund_01a.jpeg: 
 Real:                  dachshund   Classifier:                         marmot
+
+       German_shepherd_01b.jpg: 
+Real:            german shepherd   Classifier:                       sea lion
 
                Heizung_01.jpeg: 
 Real:                    heizung   Classifier:                         tripod
@@ -37,9 +45,13 @@ Real:                      oskar   Classifier:                  border collie
             Dachshund_02b.jpeg: 
 Real:                  dachshund   Classifier:                        warthog
 
-# Total Images 6 # Matches: 0 # NOT Matches: 6
+# Total Images 8 # Matches: 1 # NOT Matches: 7
 
      MATCH:
+
+       German_shepherd_01a.jpg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
 
  NOT A MATCH:
 
@@ -50,6 +62,10 @@ PetLabelDog: 1  ClassLabelDog: 1
             Dachshund_01a.jpeg: 
 Real:                  dachshund   Classifier:                         marmot  
 PetLabelDog: 1  ClassLabelDog: 0
+
+       German_shepherd_01b.jpg: 
+Real:            german shepherd   Classifier:                       sea lion  
+PetLabelDog: 0  ClassLabelDog: 0
 
                Heizung_01.jpeg: 
 Real:                    heizung   Classifier:                         tripod  
@@ -67,31 +83,32 @@ PetLabelDog: 0  ClassLabelDog: 1
 Real:                  dachshund   Classifier:                        warthog  
 PetLabelDog: 1  ClassLabelDog: 0
 
-# Total Images 6 # Matches: 0 # NOT Matches: 6
+# Total Images 8 # Matches: 1 # NOT Matches: 7
 
  ** Statistics from calculates_results_stats() function:
-N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+N Images:  8  N Dog Images:  4  N NotDog Images:  4 
 Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+N Images:  8  N Dog Images:  4  N NotDog Images:  4 
 Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
 
-Runtime: 2021-06-24 22:02:44.060621
+Runtime: 2021-06-24 22:17:53.784688
 Architecture: resnet
-Number of images: 6
+Number of images: 8
 Number of dog images: 4
-Number of NOTdog images: 2
-pct_match: 0.0
+Number of NOTdog images: 4
+pct_match: 12.5
 pct_correct_dogs: 50.0
 pct_correct_notdogs: 100.0
 pct_correct_breed: 0.0
 Misclassified dog found!
 file: Dachshund_01a.jpeg, pet label: dachshund, classifier label: marmot
+file: German_shepherd_01a.jpg, pet label: german shepherd, classifier label: german shepherd, german shepherd dog, german police dog, alsatian
 file: Oskar_01.jpeg, pet label: oskar, classifier label: border collie
 file: Dachshund_02b.jpeg, pet label: dachshund, classifier label: warthog
 Misclassified breed found!
 file: Dachshund_02a.jpeg, pet label: dachshund, classifier label: norfolk terrier
 file: Dachshund_01b.jpeg, pet label: dachshund, classifier label: border terrier
 
-** Total Elapsed Runtime: 0:0:0
+** Total Elapsed Runtime: 0:0:1
