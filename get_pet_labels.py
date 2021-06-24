@@ -57,7 +57,7 @@ def get_pet_labels(image_dir):
         else:
             print('{} is already in the dict'.format(file_names[i]))
 
-    print(len(dogs))
+    #print(len(dogs))
 
     # Replace None with the results_dic dictionary that you created with this
     # function
