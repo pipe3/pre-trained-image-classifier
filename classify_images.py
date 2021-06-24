@@ -78,6 +78,9 @@ def classify_images(images_dir, results_dic, model):
         else:
             val.append(0)
 
+        # Lets add a progress bar for this activity
+        print('.', end='', flush=True)
+
         #print("Filename: {}, val: {}".format(file_name,results_dic[file_name]))
         #print("Label: {}, classification: {}".format(val,image_classification))
     #print("Length of dict after: {}".format(len(results_dic)))
