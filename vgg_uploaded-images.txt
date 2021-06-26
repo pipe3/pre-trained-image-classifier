@@ -10,17 +10,17 @@ Pet Image Label Dictionary has 8 key-value pairs.
 Below are 8 of them:
  1 key:             Dachshund_02a.jpeg  label:                  dachshund
  2 key:             Dachshund_01a.jpeg  label:                  dachshund
- 3 key:        German_shepherd_01b.jpg  label:            german shepherd
- 4 key:                Heizung_01.jpeg  label:                    heizung
- 5 key:        German_shepherd_01a.jpg  label:            german shepherd
+ 3 key:    German_shepherd_dog_01b.jpg  label:        german shepherd dog
+ 4 key:    German_shepherd_dog_01a.jpg  label:        german shepherd dog
+ 5 key:                Heizung_01.jpeg  label:                    heizung
  6 key:             Dachshund_01b.jpeg  label:                  dachshund
  7 key:                  Oskar_01.jpeg  label:                      oskar
  8 key:             Dachshund_02b.jpeg  label:                  dachshund
 ........
      MATCH:
 
-       German_shepherd_01a.jpg: 
-Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+   German_shepherd_dog_01a.jpg: 
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
 
  NOT A MATCH:
 
@@ -30,8 +30,8 @@ Real:                  dachshund   Classifier:                irish wolfhound
             Dachshund_01a.jpeg: 
 Real:                  dachshund   Classifier:     airedale, airedale terrier
 
-       German_shepherd_01b.jpg: 
-Real:            german shepherd   Classifier:                       sea lion
+   German_shepherd_dog_01b.jpg: 
+Real:        german shepherd dog   Classifier:                       sea lion
 
                Heizung_01.jpeg: 
 Real:                    heizung   Classifier:                         tripod
@@ -49,9 +49,9 @@ Real:                  dachshund   Classifier:    wild boar, boar, sus scrofa
 
      MATCH:
 
-       German_shepherd_01a.jpg: 
-Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
-PetLabelDog: 0  ClassLabelDog: 1
+   German_shepherd_dog_01a.jpg: 
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
 
  NOT A MATCH:
 
@@ -63,9 +63,9 @@ PetLabelDog: 1  ClassLabelDog: 1
 Real:                  dachshund   Classifier:     airedale, airedale terrier  
 PetLabelDog: 1  ClassLabelDog: 1
 
-       German_shepherd_01b.jpg: 
-Real:            german shepherd   Classifier:                       sea lion  
-PetLabelDog: 0  ClassLabelDog: 0
+   German_shepherd_dog_01b.jpg: 
+Real:        german shepherd dog   Classifier:                       sea lion  
+PetLabelDog: 1  ClassLabelDog: 0
 
                Heizung_01.jpeg: 
 Real:                    heizung   Classifier:                         tripod  
@@ -86,24 +86,24 @@ PetLabelDog: 1  ClassLabelDog: 0
 # Total Images 8 # Matches: 1 # NOT Matches: 7
 
  ** Statistics from calculates_results_stats() function:
-N Images:  8  N Dog Images:  4  N NotDog Images:  4 
-Pct Corr dog:  75.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+N Images:  8  N Dog Images:  6  N NotDog Images:  2 
+Pct Corr dog:  66.7 Pct Corr NOTdog: 100.0  Pct Corr Breed:  16.7
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  8  N Dog Images:  4  N NotDog Images:  4 
-Pct Corr dog:  75.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+N Images:  8  N Dog Images:  6  N NotDog Images:  2 
+Pct Corr dog:  66.7 Pct Corr NOTdog:  50.0  Pct Corr Breed:  16.7
 
-Runtime: 2021-06-24 22:18:06.335550
+Runtime: 2021-06-26 18:06:59.062228
 Architecture: vgg
 Number of images: 8
-Number of dog images: 4
-Number of NOTdog images: 4
+Number of dog images: 6
+Number of NOTdog images: 2
 pct_match: 12.5
-pct_correct_dogs: 75.0
+pct_correct_dogs: 66.66666666666666
 pct_correct_notdogs: 100.0
-pct_correct_breed: 0.0
+pct_correct_breed: 16.666666666666664
 Misclassified dog found!
-file: German_shepherd_01a.jpg, pet label: german shepherd, classifier label: german shepherd, german shepherd dog, german police dog, alsatian
+file: German_shepherd_dog_01b.jpg, pet label: german shepherd dog, classifier label: sea lion
 file: Oskar_01.jpeg, pet label: oskar, classifier label: border collie
 file: Dachshund_02b.jpeg, pet label: dachshund, classifier label: wild boar, boar, sus scrofa
 Misclassified breed found!

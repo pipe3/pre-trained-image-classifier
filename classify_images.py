@@ -77,6 +77,7 @@ def classify_images(images_dir, results_dic, model):
             val.append(1)
         else:
             val.append(0)
+            #print("No match: {} - {} - {}".format(file_name,val[0],val[1]))
 
         # Lets add a progress bar for this activity
         print('.', end='', flush=True)

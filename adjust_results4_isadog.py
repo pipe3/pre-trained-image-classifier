@@ -69,11 +69,13 @@ def adjust_results4_isadog(results_dic, dogfile):
     """
 
     dog_names = list() # initialize list
+    #dog_names = dict()
 
     # read dog names into list and strip newlines
     with open(dogfile, 'r') as file:
         for line in file:
             dog_names.append(line.strip())
+            #dog_names[line.strip()]=1
     #print(dog_names)
 
     # lets test dogs
@@ -86,6 +88,8 @@ def adjust_results4_isadog(results_dic, dogfile):
         else:
             #print("{} is NOT a dog!".format(val[0]))
             val.append(0)
+            #print("Not a dog: {} - {}".format(key,val[0]))
+            #print(dog_names)
 
         # check against classifications
         if val[1] in dog_names:
